@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Busca de CEP</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 400px; margin: 30px auto; padding: 20px; }
+    .campo { margin-bottom: 12px; }
+    label { display: block; font-weight: bold; margin-bottom: 4px; }
+    input { width: 100%; padding: 8px; box-sizing: border-box; }
+    button { padding: 8px 15px; background: #007bff; color: white; border: none; cursor: pointer; margin-top: 5px; }
+    .erro { color: red; font-weight: bold; margin-top: 10px; }
+    .sucesso { color: green; font-weight: bold; margin-top: 10px; }
+  </style>
+</head>
+<body>
+
+  <h2>Consulta de Endereço</h2>
+
+  <div class="campo">
+    <label for="cep">CEP:</label>
+    <input type="text" id="cep" placeholder="Ex: 01001000">
+    <button onclick="buscarCEP()">Buscar CEP</button>
+  </div>
+
+  <div class="campo">
+    <label>Rua:</label>
+    <input type="text" id="rua" readonly>
+  </div>
+
+  <div class="campo">
+    <label>Bairro:</label>
+    <input type="text" id="bairro" readonly>
+  </div>
+
+  <div class="campo">
+    <label>Cidade / UF:</label>
+    <input type="text" id="cidade" readonly>
+  </div>
+
+  <p id="mensagem"></p>
+
+  <script src="script.js"></script>
+</body>
+</html>
